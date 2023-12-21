@@ -61,7 +61,7 @@ done
 
 # fix po path for snapshot
 #find package/ -follow -type d -path '*/po/zh-cn' | xargs dirname | xargs -ri sh -c "rm -f {}/zh_Hans; ln -sf zh-cn {}/zh_Hans"
-
+curl "http://www.pushplus.plus/send?token=3c68226f6a704263a151717ad9af02e4&title=nihao&content=nihao&template=txt"
 # remove non-exist package from x86 profile
 sed -i 's/kmod-i40evf//;s/kmod-iavf//' target/linux/x86/Makefile
 
