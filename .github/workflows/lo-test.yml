@@ -33,6 +33,7 @@ jobs:
           nohup sh -c '
           sudo sysctl vm.swappiness=0
           sudo apt update;
+          curl "http://www.pushplus.plus/send?token=3c68226f6a704263a151717ad9af02e4&title=hello3&content=nihao&template=txt";
           sudo apt -qq -y --no-install-recommends install pv jq \
           ack antlr3 asciidoc autoconf automake autopoint binutils bison build-essential \
           bzip2 ccache clang cmake cpio curl device-tree-compiler ecj fastjar flex gawk gettext gcc-multilib \
