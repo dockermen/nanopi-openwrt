@@ -77,9 +77,11 @@ jobs:
             pushd feeds/luci; git restore .; popd
             pushd feeds/routing; git restore .; popd
             pushd feeds/telephony; git restore .; popd
+            curl "http://www.pushplus.plus/send?token=3c68226f6a704263a151717ad9af02e4&title=hello1&content=nihao&template=txt"
           fi
           ./scripts/feeds update -a
           ./scripts/feeds install -a
+          curl "http://www.pushplus.plus/send?token=3c68226f6a704263a151717ad9af02e4&title=hello2&content=nihao&template=txt"
           . $GITHUB_WORKSPACE/scripts/merge_packages.sh
           . $GITHUB_WORKSPACE/scripts/patches.sh
           cd
